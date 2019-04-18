@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Sarajevska pivara | Limenka 155 godina</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./style/normalize.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="./style/main.css" />
+	<script type="text/javascript"> adroll_adv_id = "W234NG5LKZEYLMJF47CMVF"; adroll_pix_id = "5ESFVYMDDZEEFGBABZZAXD"; (function () { var _onload = function(){ if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return} if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return} var scr = document.createElement("script"); var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com"); scr.setAttribute('async', 'true'); scr.type = "text/javascript"; scr.src = host + "/j/roundtrip.js"; ((document.getElementsByTagName('head') || [null])[0] || document.getElementsByTagName('script')[0].parentNode).appendChild(scr); }; if (window.addEventListener) {window.addEventListener('load', _onload, false);} else {window.attachEvent('onload', _onload)} }()); 
+	</script>
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="left">
+
+            <img src="./img/155-godina.svg" alt="">
+
+        </div>
+
+        <div class="right">
+
+            <div id="facts" v-on:click="nextFact">
+
+                <transition name="slide-fade" mode="out-in">
+
+                    <div class="facts-container" :key="currentFact.crestURL">
+
+                        <div class="crests">
+
+                            <img v-bind:src="currentFact.crestURL" alt="">
+
+                        </div>
+
+                        <div class="text-content">
+
+                            <h4>{{ currentFact.textContent }}</h4>
+
+                        </div>
+
+                    </div>
+
+                </transition>
+
+                <div class="arrows">
+
+                    <img v-on:click.stop="prevFact" src="./img/arrow-left.svg"  alt="">
+
+                    <img v-on:click.stop="nextFact" src="./img/arrow-right.svg" alt="">
+
+                </div>
+
+            </div>
+
+            <a href="./privacy.html" class="privacy">Privacy policy</a>
+        </div>
+
+        <div class="can">
+
+            <img src="./img/limenka_sa_sjenom.png" alt="">
+
+        </div>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./js/vue.min.js"></script>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>

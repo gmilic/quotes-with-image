@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sarajevska pivara | Limenka 155 godina</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="./style/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./style/main.css" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="left">
+            <img src="./img/155-godina.svg" alt="">
+        </div>
+        <div class="right">
+            <div id="facts" v-on:click="nextFact">
+                <transition name="slide-fade" mode="out-in">
+                    <div class="facts-container" :key="currentFact.crestURL">
+                        <div class="crests">
+                            <img v-bind:src="currentFact.crestURL" alt="">
+                        </div>
+                        <div class="text-content">
+                            <h4>{{ currentFact.textContent }}</h4>
+                        </div>
+                    </div>
+                </transition>
+                <div class="arrows">
+                    <img v-on:click.stop="prevFact" src="./img/arrow-left.svg"  alt="">
+                    <img v-on:click.stop="nextFact" src="./img/arrow-right.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="can">
+            <img src="./img/limenka_sa_sjenom.png" alt="">
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
